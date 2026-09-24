@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState, type ReactNode } from 'react';
 import { ArrowRight, ArrowUp, ChevronDown, Cross, HeartPulse, ShieldCheck } from 'lucide-react';
 import fundacaologo from '@/assets/images/logo/FUABC_logotipo_2014.jpg';
@@ -5,6 +6,12 @@ import complexoLogo from '@/assets/images/logo/complexo_scs-removebg-preview.png
 import pmscsLogo from '@/assets/images/logo/logo-pmscs-2023.png';
 import susLogo from '@/assets/images/logo/sus-logo.png'; 
  
+=======
+import { useState, type ReactNode } from 'react';
+import { ArrowRight, ChevronDown, Cross, HeartPulse, ShieldCheck } from 'lucide-react';
+import complexoLogo from '@/assets/images/logo/complexo_scs-removebg-preview.png';
+import pmscsLogo from '@/assets/images/logo/logo-pmscs-2023.png';
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
 
 type Example = { wrong: string; right: string };
 type Tool = { name: string; summary: string; detail: string };
@@ -72,20 +79,31 @@ function ExamplePair({ example }: { example: Example }) {
 
 function ToolCard({ tool, index }: { tool: Tool; index: number }) {
   const [open, setOpen] = useState(false);
+<<<<<<< HEAD
   const detailId = `tool-detail-${index}`;
   return (
     <div className={`tool-card ${open ? 'is-open' : ''}`}>
       <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls={detailId} className="tool-trigger">
+=======
+  return (
+    <div className={`tool-card ${open ? 'is-open' : ''}`}>
+      <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="tool-trigger">
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
         <span className="tool-number">{index + 1}</span>
         <span className="tool-copy"><strong>{tool.name} <em>— {tool.summary}</em></strong><small>{tool.summary}</small></span>
         <ChevronDown size={20} aria-hidden="true" />
       </button>
+<<<<<<< HEAD
       {open && <div id={detailId} className="tool-detail">{tool.detail}</div>}
+=======
+      {open && <div className="tool-detail">{tool.detail}</div>}
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
     </div>
   );
 }
 
 function App() {
+<<<<<<< HEAD
   const [showTop, setShowTop] = useState(false);
 
   useEffect(() => {
@@ -114,17 +132,36 @@ function App() {
          {/* <span className="sus">SUS <Cross size={18} /></span> */}
 
         </div>
+=======
+  return (
+    <main>
+      <header className="institutional-header">
+        <div className="brand-mark">
+          <img src={complexoLogo} alt="Logo do Complexo de Saúde de São Caetano do Sul" className="brand-logo" />
+          <img src={pmscsLogo} alt="Logo da Prefeitura Municipal de São Caetano do Sul" className="partner-logo" />
+        </div>
+        <div className="header-partners">
+          <span className="sus">SUS <Cross size={18} /></span>
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
         </div>
       </header>
 
       <section className="hero" aria-labelledby="page-title">
+<<<<<<< HEAD
         <div className="hero-icon" aria-hidden="true"><HeartPulse size={54} /></div>
+=======
+        <div className="hero-icon"><HeartPulse size={54} /></div>
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
         <div className="hero-title"><p className="eyebrow">Segurança do paciente</p><h1 id="page-title">Comunicação<br /><span>efetiva</span></h1><p>Comunicar bem é estratégia de <b>segurança do paciente</b></p></div>
         <div className="hero-message">Na Segurança do Paciente, comunicar não é apenas falar. É garantir que a informação certa chegue à pessoa certa, no momento certo, seja compreendida e gere a ação correta.</div>
       </section>
 
       <div className="page-shell">
+<<<<<<< HEAD
         <section className="intro-note"><ShieldCheck size={25} aria-hidden="true" /><p>Uma comunicação clara reduz ruídos, fortalece o trabalho em equipe e protege quem está no centro do cuidado.</p></section>
+=======
+        <section className="intro-note"><ShieldCheck size={25} /><p>Uma comunicação clara reduz ruídos, fortalece o trabalho em equipe e protege quem está no centro do cuidado.</p></section>
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
 
         <section className="three-tools" aria-labelledby="core-tools-title">
           <h2 id="core-tools-title" className="sr-only">Ferramentas de comunicação estruturada</h2>
@@ -142,6 +179,7 @@ function App() {
           <div className="manager-section"><SectionTitle tone="orange">Chefia também pode dizer não</SectionTitle><p className="manager-lead">Prevenção ao assédio não significa impedir a chefia de cobrar.</p><div className="stacked-examples">{managerExamples.map((example, index) => <ExamplePair example={example} key={`${example.wrong}-${index}`} />)}</div><div className="orange-banner"><strong>Cobrar é necessário. Humilhar não.</strong><span>Firmeza com respeito gera resultados.</span></div></div>
         </section>
 
+<<<<<<< HEAD
         <footer className="closing"><div><p className="closing-kicker">Comunicação não violenta</p><h2>Não significa falar manso.</h2><p className="closing-kicker">Comunicação assertiva</p><h2>Não significa falar duro.</h2><p className="closing-text">A combinação das duas permite dizer o que precisa ser dito, com clareza, respeito e responsabilidade.</p></div><div className="closing-badge"><div className="badge-cross" aria-hidden="true">+</div><strong>Segurança<br />do paciente</strong><small>Comunicação é cuidado.</small></div></footer>
       </div>
     </main>
@@ -151,6 +189,11 @@ function App() {
         </button>
       )}
     </>
+=======
+        <footer className="closing"><div><p className="closing-kicker">Comunicação não violenta</p><h2>Não significa falar manso.</h2><p className="closing-kicker">Comunicação assertiva</p><h2>Não significa falar duro.</h2><p className="closing-text">A combinação das duas permite dizer o que precisa ser dito, com clareza, respeito e responsabilidade.</p></div><div className="closing-badge"><div className="badge-cross">+</div><strong>Segurança<br />do paciente</strong><small>Comunicação é cuidado.</small></div></footer>
+      </div>
+    </main>
+>>>>>>> 6d617444f1f3d57797d58a55ec920d01493a57f6
   );
 }
 
