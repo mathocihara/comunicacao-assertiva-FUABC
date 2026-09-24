@@ -1,4 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
+import { FaLinkedin } from "react-icons/fa";
 import { ArrowRight, ArrowUp, ChevronDown, Cross, HeartPulse, ShieldCheck } from 'lucide-react';
 import fundacaologo from '@/assets/images/logo/FUABC_logotipo_2014.jpg';
 import complexoLogo from '@/assets/images/logo/complexo_scs-removebg-preview.png';
@@ -159,13 +160,15 @@ function App() {
       <span>Desenvolvido por:</span>
       <p></p>
       <strong>Matheus Yukio Lopes Hocihara</strong><p></p>
-      <a
-        href="https://www.linkedin.com/in/matheushocihara/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
+<a
+  href="https://www.linkedin.com/in/matheushocihara/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="linkedin-link"
+>
+  <FaLinkedin size={40} />
+  LinkedIn
+</a>
     </div>
   </div>
 
