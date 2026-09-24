@@ -142,16 +142,64 @@ function App() {
           <div className="manager-section"><SectionTitle tone="orange">Chefia também pode dizer não</SectionTitle><p className="manager-lead">Prevenção ao assédio não significa impedir a chefia de cobrar.</p><div className="stacked-examples">{managerExamples.map((example, index) => <ExamplePair example={example} key={`${example.wrong}-${index}`} />)}</div><div className="orange-banner"><strong>Cobrar é necessário. Humilhar não.</strong><span>Firmeza com respeito gera resultados.</span></div></div>
         </section>
 
-        <footer className="closing"><div><p className="closing-kicker">Comunicação não violenta</p><h2>Não significa falar manso.</h2><p className="closing-kicker">Comunicação assertiva</p><h2>Não significa falar duro.</h2><p className="closing-text">A combinação das duas permite dizer o que precisa ser dito, com clareza, respeito e responsabilidade.</p></div><div className="closing-badge"><div className="badge-cross" aria-hidden="true">+</div><strong>Segurança<br />do paciente</strong><small>Comunicação é cuidado.</small></div></footer>
-      </div>
-    </main>
-      {showTop && (
-        <button type="button" className="back-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Voltar ao topo da página">
-          <ArrowUp size={20} aria-hidden="true" />
-        </button>
-      )}
-    </>
-  );
+<footer className="closing">
+  <div>
+    <p className="closing-kicker">Comunicação não violenta</p>
+    <h2>Não significa falar manso.</h2>
+
+    <p className="closing-kicker">Comunicação assertiva</p>
+    <h2>Não significa falar duro.</h2>
+
+    <p className="closing-text">
+      A combinação das duas permite dizer o que precisa ser dito,
+      com clareza, respeito e responsabilidade.
+    </p>
+    <br></br>
+    <div className="author-credit">
+      <span>Desenvolvido por:</span>
+      <p></p>
+      <strong>Matheus Yukio Lopes Hocihara</strong><p></p>
+      <a
+        href="https://www.linkedin.com/in/matheushocihara/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+    </div>
+  </div>
+
+  <div className="closing-badge">
+    <div className="badge-cross" aria-hidden="true">+</div>
+    <strong>
+      Segurança
+      <br />
+      do paciente
+    </strong>
+    <small>Comunicação é cuidado.</small>
+  </div>
+</footer>
+
+</div>
+</main>
+
+{showTop && (
+  <button
+    type="button"
+    className="back-to-top"
+    onClick={() =>
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+    aria-label="Voltar ao topo da página"
+  >
+    <ArrowUp size={20} aria-hidden="true" />
+  </button>
+)}
+</>
+);
 }
 
 export default App;
